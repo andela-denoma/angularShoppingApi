@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html ng-app="shoppingapp">
+  <head>
+    <meta charset="utf-8">
+    <title>Shopping</title>
+    <link href='http://fonts.googleapis.com/css?family=Dancing+Script|Inconsolata' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body ng-controller="mainController">
+    <div class="container">
+      <header class="main_header">
+          <h2><span id ="letter">S</span>hopping Styles</h2> 
+      </header>
+      <div class="wrapper">
+         <img src ="img/logo.png" alt = "logo" class="logo"> 
+          <h1>FIND THE LATEST PRODUCTS ONLINE</h1>
+            <form>
+              <input type="search" ng-model="search" name="search" id="search" ng-keyup="$event.keyCode == 13">
+              <input type="submit" ng-click="getProducts()" value="Search" id="submit">
+            </form> 
+      </div>
+        <div ng-show="error" id="error">ITEM NOT FOUND</div>
+        <div id="container">
+          <ul ng-repeat="item in products" id="users">
+            <li>
+              <img ng-src="{{ item.image.sizes.Medium.url }}" class="image"/>
+                <div>
+                <span class="list"> ITEM ID : {{ item.id }} </span>
+                <span class="list"> ITEM NAME : {{ item.name }} </span>
+                
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div id ="images">
+          <ul class="gallery">
+            <li class="image_one">
+              <img src ="img/dress_1.jpg" alt ="">
+            </li>
+            <li class="image_two">
+               <img src ="img/dress_2.jpg" alt ="">
+            </li>
+            <li class="image_three">
+               <img src ="img/dress_3.jpg" alt ="">
+            </li>
+            <li class="image_four">
+               <img src ="img/dress_4.jpg" alt ="">
+            </li>
+            <li class="image_five">
+               <img src ="img/dress_5.jpg" alt ="">
+            </li>
+            <li class="image_six">
+               <img src ="img/dress_6.jpg" alt ="">
+            </li>
+            <li class="image_seven">
+               <img src ="img/dress_7.jpg" alt ="">
+            </li>
+            <li class="image_eight">
+               <img src ="img/dress_8.jpg" alt ="">
+            </li>
+            <li class="image_nine">
+               <img src ="img/dress_9.jpg" alt ="">
+            </li>
+          </ul>
+        </div>
+      <footer>
+        <p>&copy; 2014 Enoma Deborah.</p>
+      </footer>
+    </div>
+    <script src="js/angular.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
