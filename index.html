@@ -21,13 +21,24 @@
       </div>
         <div ng-show="error" id="error">ITEM NOT FOUND</div>
         <div id="container">
-          <ul ng-repeat="item in products" id="users">
+          <ul ng-repeat="item in products" id="items">
             <li>
               <img ng-src="{{ item.image.sizes.Medium.url }}" class="image"/>
-                <div>
-                <span class="list"> ITEM ID : {{ item.id }} </span>
-                <span class="list"> ITEM NAME : {{ item.name }} </span>
-                
+              <div>
+                <div id="product">
+                  <div>
+                    <span class="list">NAME : {{ item.name }} </span>
+                  </div>
+                  <div>
+                    <span class="list">RETAILER : {{ item.retailer.name }} </span>
+                  </div>
+                  <div>
+                    <span class="list">CATEGORY: {{ item.categories[0].name }} </span>
+                  </div>
+                  <div>
+                    <span class="list">GET ITEM: <a ng-href = "{{ item.pageUrl }}">CLICK HERE</a> </span>
+                  </div> 
+                </div>   
               </div>
             </li>
           </ul>
@@ -35,31 +46,49 @@
         <div id ="images">
           <ul class="gallery">
             <li class="image_one">
-              <img src ="img/dress_1.jpg" alt ="">
+              <a href="img/dress_1.jpg">
+                <img src ="img/dress_1.jpg" alt ="">
+              </a>
             </li>
             <li class="image_two">
-               <img src ="img/dress_2.jpg" alt ="">
+              <a href="img/dress_2jpg">
+                <img src ="img/dress_2.jpg" alt ="">
+              </a>
             </li>
             <li class="image_three">
-               <img src ="img/dress_3.jpg" alt ="">
+              <a href="img/dress_3.jpg">
+                <img src ="img/dress_3.jpg" alt ="">
+              </a>
             </li>
             <li class="image_four">
-               <img src ="img/dress_4.jpg" alt ="">
+              <a href="img/dress_4.jpg">
+                <img src ="img/dress_4.jpg" alt ="">
+              </a>
             </li>
             <li class="image_five">
-               <img src ="img/dress_5.jpg" alt ="">
+              <a href="img/dress_5.jpg">
+                <img src ="img/dress_5.jpg" alt ="">
+              </a>
             </li>
             <li class="image_six">
-               <img src ="img/dress_6.jpg" alt ="">
+              <a href="img/dress_6.jpg">
+                <img src ="img/dress_6.jpg" alt ="">
+              </a>
             </li>
             <li class="image_seven">
-               <img src ="img/dress_7.jpg" alt ="">
+              <a href="img/dress_7.jpg">
+                <img src ="img/dress_7.jpg" alt ="">
+              </a>
             </li>
             <li class="image_eight">
-               <img src ="img/dress_8.jpg" alt ="">
+              <a href="img/dress_8.jpg">
+                <img src ="img/dress_8.jpg" alt ="">
+              </a>
             </li>
             <li class="image_nine">
-               <img src ="img/dress_9.jpg" alt ="">
+              <a href="img/dress_9.jpg">
+                <img src ="img/dress_9.jpg" alt ="">
+              </a>
             </li>
           </ul>
         </div>
