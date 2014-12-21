@@ -19,15 +19,15 @@ body{
 *********************/
 
 .container{
-width: 980px;
-margin: 0 auto;
-overflow: hidden;
-padding: 0;
-background: lightblue;
-position: relative;
--webkit-box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.17);
--moz-box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.17);
-box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.17);
+  width: 980px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0;
+  background: lightblue;
+  position: relative;
+  -webkit-box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.17);
+  -moz-box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.17);
+  box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.17);
 }
 
 /**********************
@@ -75,17 +75,14 @@ p{
   line-height: 1.4;
 }
 input[type=search] {
+  border: none;
+  border-radius: 15px;
   padding: 0.75%;
   font-size: 0.72em;
-}
-#search{
-  padding: 0.65%;
   width: 40%;
 }
-#search:focus{
-  border: 1px solid #000;
-}
 #submit{
+  border-radius: 15px;
   border: none;
   padding: 0.75% 3%;
   margin-top: 2%;
@@ -93,9 +90,10 @@ input[type=search] {
   color: white;
   font-size: 0.75em;
 }
-#errorOutput{
+#error{
   margin-top: 3%;
   text-align: center;
+  font-size: 1em;
 }
 
 
@@ -118,42 +116,36 @@ input[type=search] {
   height: 100px;
   border: 2px solid #000;
 }
- 
- /***********************
-    LIST IMAGES
- ***********************/
 
 #images>ul>li{
   margin: 60px;
   display: inline-block;
 }
+ 
+ /***********************
+    LIST OF PRODUCTS
+ ***********************/
 
 #wrapper {
   margin-left: 3%;
   width: 300px;
 }
-
 .image{
-  margin-left: 20%;
-  padding: 10%;
+  width: 300px;
+  height: 350px;
+  margin-bottom: 5%;
+}
+#container>ul{
+  margin-left: 30%;
+  padding: 50px;
   display: inline-block;
-  width: 200px;
-  height: 250px;
 }
 #container>ul>li {
-  display: inline-block;
-  border: 2px solid #000;
+  display: inline-block; 
 }
-#product {
-  display: block;
+.list{
+  font-size: 1em;
 }
- #items{
-  margin-top: 5%;
-  margin-left: 9%;
-  padding: 10px;
-}
-
-
 
 /********************
       FOOTER

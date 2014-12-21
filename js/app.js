@@ -22,7 +22,7 @@ shoppingapp.controller('mainController', function($scope, ShoppingService){
 });
 
 shoppingapp.factory('ShoppingService', function($http){
-  var url =  "http://api.shopstyle.com/api/v2/products?pid=uid5369-26250213-59&offset=0&limit=20";
+  var url =  "http://api.shopstyle.com/api/v2/products?pid=uid5369-26250213-59&offset=0&limit=30";
   var Product = {};
 
   Product.getURL = function( searchval ){
