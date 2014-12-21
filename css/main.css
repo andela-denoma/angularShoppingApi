@@ -4,7 +4,7 @@
 
 body{
   background: #f0f8ff;
-  font-family: 'Inconsolata' sans-serif;
+  font-family: 'Inconsolata', sans-serif;
 }
 
 /*********************
@@ -14,6 +14,12 @@ body{
   color: #000;
 }
 
+/*********************
+      FONT-SIZE
+*********************/
+#error, .list, footer>p{
+  font-size: 1em;
+}
 /*********************
       CONTAINER
 *********************/
@@ -93,7 +99,6 @@ input[type=search] {
 #error{
   margin-top: 3%;
   text-align: center;
-  font-size: 1em;
 }
 
 
@@ -143,16 +148,13 @@ input[type=search] {
 #container>ul>li {
   display: inline-block; 
 }
-.list{
-  font-size: 1em;
-}
+
 
 /********************
       FOOTER
 ********************/
 
 footer p{
-  font-size: 1em;
   text-align: center;
   clear: both;
   padding-top: 15%;

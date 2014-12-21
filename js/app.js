@@ -18,7 +18,7 @@ shoppingapp.controller('mainController', function($scope, ShoppingService){
       }  
           
     });
-   }
+   };
 });
 
 shoppingapp.factory('ShoppingService', function($http){
