@@ -94,14 +94,16 @@ p{
 input[type=search] {
   border: none;
   border-radius: 15px;
+  outline: 0;
   padding: 0.75%;
   font-size: 0.72em;
   width: 40%;
 }
 
-#submit{
+#submit{ 
   border-radius: 15px;
   border: none;
+  outline: 0;
   padding: 0.75% 3%;
   margin-top: 2%;
   background: #000;

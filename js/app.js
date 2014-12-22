@@ -2,10 +2,11 @@ var shoppingapp = angular.module('shoppingapp', []);
 
 shoppingapp.controller('mainController', function($scope, ShoppingService){
   $scope.products = [];
-  $scope.getProducts = function(){
+  $scope.getProducts = function($event){
+    $event.preventDefault();
     ShoppingService.getURL( $scope.search ).success( function( response ){
-      console.log(response.products);
-      console.log(response.products.length);
+      console.log( $scope.search );
+       $scope.search = "";
       if(response.products.length > 0){
 
         angular.forEach( response.products, function( items, index ){
@@ -15,10 +16,10 @@ shoppingapp.controller('mainController', function($scope, ShoppingService){
       }
       else {
         $scope.error="true";
-      }  
-          
+      } 
+
     });
-   };
+   }; 
 });
 
 shoppingapp.factory('ShoppingService', function($http){

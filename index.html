@@ -16,7 +16,7 @@
           <h1>FIND THE LATEST PRODUCTS ONLINE</h1>
             <form>
               <input type="search" ng-model="search" name="search" id="search" placeholder="Enter a search item..." required>
-              <input type="submit" ng-click="getProducts()" value="Search" id="submit">
+              <input type="submit" ng-click="getProducts($event)" value="Search" id="submit">
             </form> 
       </div>
       <div ng-show="error" id="error">ITEM NOT FOUND</div>
