@@ -46,20 +46,29 @@ body{
   width: 100%;
   z-index: 100;
 }
+
 .main_header h2{
 font-size: 1.5em;
 color: #fff;
 padding-left: 3%;
 }
+
 #letter{
 font-size: 3em;
 }
+
 .logo{
 height: 120px;
 width: 150px;
 float: left;
 margin-left: 3%;
 }
+
+#wrapper {
+  margin-left: 3%;
+  width: 300px;
+}
+
 .wrapper h1, form{
 text-align: center;
 padding: 4% 10% 0 0;
@@ -74,12 +83,14 @@ form{
   text-align: center;
   font-size: 2em;
 }
+
 p{
   color: #fff;
   font-size: 1.4em;
   margin: 0 5px 13px 0;
   line-height: 1.4;
 }
+
 input[type=search] {
   border: none;
   border-radius: 15px;
@@ -87,6 +98,7 @@ input[type=search] {
   font-size: 0.72em;
   width: 40%;
 }
+
 #submit{
   border-radius: 15px;
   border: none;
@@ -96,6 +108,7 @@ input[type=search] {
   color: white;
   font-size: 0.75em;
 }
+
 #error{
   margin-top: 3%;
   text-align: center;
@@ -131,20 +144,18 @@ input[type=search] {
     LIST OF PRODUCTS
  ***********************/
 
-#wrapper {
-  margin-left: 3%;
-  width: 300px;
-}
 .image{
   width: 300px;
   height: 350px;
   margin-bottom: 5%;
 }
+
 #container>ul{
   margin-left: 30%;
   padding: 50px;
   display: inline-block;
 }
+
 #container>ul>li {
   display: inline-block; 
 }
