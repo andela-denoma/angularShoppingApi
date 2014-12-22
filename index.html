@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html ng-app="shoppingapp">
+  <head>
+    <meta charset="utf-8">
+    <title>Shopping</title>
+    <link href='http://fonts.googleapis.com/css?family=Dancing+Script|Inconsolata' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body ng-controller="mainController">
+    <div class="container">
+      <header class="main_header">
+        <h2><span id ="letter">S</span>hopping Styles</h2> 
+      </header>
+      <div class="wrapper">
+         <img src ="img/logo.png" alt = "logo" class="logo"> 
+          <h1>FIND THE LATEST PRODUCTS ONLINE</h1>
+            <form>
+              <input type="search" ng-model="search" name="search" id="search" placeholder="Enter a search item..." required>
+              <input type="submit" ng-click="getProducts()" value="Search" id="submit">
+            </form> 
+      </div>
+      <div ng-show="error" id="error">ITEM NOT FOUND</div>
+      <div id="container">
+        <ul ng-repeat="item in products" id="items">
+          <li>
+            <div id="products">
+              <img ng-src="{{ item.image.sizes.Original.url }}" class="image"/>
+                  <div>
+                    <span class="list"><strong>NAME:</strong> {{ item.name }} </span>
+                  </div>
+                  <div>
+                    <span class="list"><strong>RETAILER:</strong> {{ item.retailer.name }} </span>
+                  </div>
+                  <div>
+                    <span class="list"><strong>CATEGORY:</strong> {{ item.categories[0].name }} </span>
+                  </div>
+                  <div>
+                    <span class="list"><strong>GET ITEM:</strong> <a ng-href = "{{ item.pageUrl }}">CLICK HERE</a> </span>
+                  </div> 
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div id ="images">
+        <ul class="gallery">
+          <li>
+            <a href="img/dress_1.jpg">
+              <img src ="img/dress_1.jpg" alt ="">
+            </a>
+          </li>
+          <li>
+            <a href="img/dress_2.jpg">
+              <img src ="img/dress_2.jpg" alt ="">
+            </a>
+          </li>
+          <li>
+            <a href="img/dress_3.jpg">
+              <img src ="img/dress_3.jpg" alt ="">
+            </a>
+          </li>
+          <li>
+            <a href="img/dress_4.jpg">
+              <img src ="img/dress_4.jpg" alt ="">
+            </a>
+          </li>
+          <li>
+            <a href="img/dress_5.jpg">
+              <img src ="img/dress_5.jpg" alt ="">
+            </a>
+          </li>
+          <li>
+            <a href="img/dress_6.jpg">
+              <img src ="img/dress_6.jpg" alt ="">
+            </a>
+          </li>
+          <li>
+            <a href="img/dress_7.jpg">
+              <img src ="img/dress_7.jpg" alt ="">
+            </a>
+          </li>
+          <li>
+            <a href="img/dress_8.jpg">
+              <img src ="img/dress_8.jpg" alt ="">
+            </a>
+          </li>
+          <li>
+            <a href="img/dress_9.jpg">
+              <img src ="img/dress_9.jpg" alt ="">
+            </a>
+          </li>
+        </ul>
+      </div>
+      <footer>
+        <p>&copy; 2014 Enoma Deborah.</p>
+      </footer>
+    </div>
+    <script src="js/angular.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
